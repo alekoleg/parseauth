@@ -9,15 +9,14 @@
 Pod::Spec.new do |s|
   s.name             = "ParseAuth"
   s.version          = "0.1.0"
-  s.summary          = "A short description of ParseAuth."
+  s.summary          = "Authentication service for Parse"
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
 #   * Try to keep it short, snappy and to the point.
 #   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!  
-  s.description      = <<-DESC
-                       DESC
+#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.description      = "Authentication service for Parse. Creation users, validation and so on"
 
   s.homepage         = "https://github.com/<GITHUB_USERNAME>/ParseAuth"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
@@ -30,11 +29,11 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'ParseAuth' => ['Pod/Assets/*.png']
-  }
+  # s.resource_bundles = {
+  #   'ParseAuth' => ['Pod/Assets/*.png']
+  # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'Parse', '~> 1.12'
 end
